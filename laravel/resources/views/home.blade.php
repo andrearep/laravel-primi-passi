@@ -30,6 +30,7 @@
     h1 {
         color: darkblue;
         font-size: 4rem;
+        margin-bottom: 2rem;
     }
 
     main {
@@ -46,12 +47,31 @@
     .title {
         margin-bottom: 2rem;
     }
+
+    ul>li {
+        list-style: none;
+        display: inline;
+    }
+
+    ul>li>a {
+        text-decoration: none;
+        margin-right: 2rem;
+        font-size: 2rem;
+    }
     </style>
 </head>
 
 <body>
     <header>
         <h1>Homepage</h1>
+
+        <nav>
+            <ul>
+                @foreach ($list as $element)
+                <li> <a href=""> {{$element}} </a></li>
+                @endforeach
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -68,6 +88,8 @@
             maxime quisquam, dolores harum fugit exercitationem doloremque ipsum odio ab distinctio. Eos earum minus
             sequi cum aspernatur neque numquam dignissimos qui consequuntur esse.
         </p>
+
+
     </main>
 
 </body>
